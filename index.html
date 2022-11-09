@@ -16,7 +16,7 @@
         <nav class="mein-nav">
             <a class="logo-link" href="./index.html" >Web<span class="header-logo">Studio</span></a>
             <ul class="site-nav list">
-                <li class="site-nav-item"><a href="./index.html" class="link">Студія</a></li>
+                <li class="site-nav-item"><a href="./index.html" class="link marker">Студія</a></li>
                 <li class="site-nav-item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
                 <li class="site-nav-item"><a href="" class="link">Контакти</a></li>
             </ul>
@@ -43,7 +43,7 @@
             <section class="hero">
                 <div class="container">
                 <h1 class="hero-title">Ефективні рішення для <br>вашого бізнесу</h1>
-                <button type="button" class="button">Замовити послугу</button>
+                <button data-modal-open type="button" class="button">Замовити послугу</button>
             </div>
             </section>
     
@@ -95,9 +95,24 @@
             <div class="container">
             <h2 class="images-title ">Чим ми займаємося</h2>
             <ul class="list">
-                <li class="box"><img src="./images/layot.jpg" alt="Розмітка" width="370" height="294"></li>
-                <li class="box"><img src="./images/mobile.jpg" alt="Мобільні додатки" width="370" height="294"></li>
-                <li class="box"><img src="./images/design.jpg" alt="Дизайн" width="370" height="294"></li>
+                <li class="box">
+                    <div class="overlay">
+                        <img src="./images/layot.jpg" alt="Розмітка" width="370" height="294">
+                        <p class="overlay-text">Десктопні додатки</p>
+                    </div>
+                </li>
+                <li class="box">
+                    <div class="overlay">
+                        <img src="./images/mobile.jpg" alt="Мобільні додатки" width="370" height="294">
+                        <p class="overlay-text">Мобільні додатки</p>
+                    </div>
+                </li>
+                <li class="box">
+                    <div class="overlay">
+                        <img src="./images/design.jpg" alt="Дизайн" width="370" height="294">
+                        <p class="overlay-text">Дизайнерські рішення</p>
+                    </div>
+                </li>
             </ul> 
         </div>
         </section>
@@ -332,6 +347,20 @@
         </address> 
     </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-close" data-modal-close>
+                <a href="" class="link">
+                <svg class="icon" width="11" height="11">
+                    <use href="./images/symbol-defs2.svg#icon-button"></use>
+                </svg>
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
     
 </body>
 </html>
